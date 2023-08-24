@@ -1,171 +1,101 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import './Query.css';
 
 const Query = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    designation: '',
-    organization: '',
-    officeAddress: '',
-    city: '',
-    email: '',
-    telephone: '',
-    mobile: '',
-    yesNo: 'yes',
-    querySubject: '',
-    query: '',
-  });
+    const [data, setData] = useState({
+        name: "",
+        mobile: "",
+        email: "",
+        designation: "",
+        organization: "",
+        officeAddress: "",
+        city: "",
+        querySubject: "",
+        query: "",
+    });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    sendDataToServer(formData);
-  };
+    const [submitted, setSubmitted] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
+    const [showFields, setShowFields] = useState(true); 
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
+    const handleChange = e => {
+        setData({
+            ...data,
+            [e.target.name]: e.target.value
+        });
+    };
 
-  const sendDataToServer = (data) => {
-    axios
-      .post('/api/items', data)
-      .then((response) => {
-        console.log('Data sent successfully:', response.data);
-      })
-      .catch((error) => {
-        console.error('An error occurred while sending data:', error);
-      });
-  };
+    const handleSubmit = async e => {
+        e.preventDefault();
 
-  return (
-    <div className="bg-green-100 flex justify-center items-center h-screen">
-      <div className="w-full max-w-md bg-white p-8 rounded shadow-md">
-        <h2 className="text-4xl font-bold mb-4 text-black text-center">Query</h2>
-        <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4 text-black">
-          <div>
-            <div className="form-row">
-              <label htmlFor="name">Name*</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder=""
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="input-field border-black"
-              />
+        try {
+            const response = await fetch("https://v1.nocodeapi.com/anuragpachgade/google_sheets/rCkXllGeoIUYcCxE?tabId=Sheet1", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify([[data.name, data.mobile, data.email, data.designation, data.organization, data.officeAddress, data.city, data.querySubject, data.query]])
+            });
+
+            if (response.status === 200) {
+                console.log("Data sent successfully");
+                setSubmitted(true);
+                setShowPopup(true);
+                
+                // Clear form data
+                setData({
+                    name: "",
+                    mobile: "",
+                    email: "",
+                    designation: "",
+                    organization: "",
+                    officeAddress: "",
+                    city: "",
+                    querySubject: "",
+                    query: "",
+                });
+            } else {
+                console.error("Failed to send data:", await response.text());
+            }
+
+        } catch (err) {
+            console.error("An error occurred:", err);
+        }
+    };
+
+    return (
+        <div className="bg-white flex justify-center items-center h-screen">
+            {submitted && showPopup ? (
+                <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
+                    <div className="bg-white p-8 rounded shadow-md">
+                        <p>We will reach you in 24hrs</p>
+                        <button onClick={() => setShowPopup(false)}>Close</button>
+                    </div>
+                </div>
+            ) : null}
+
+            <div style={{ width: "1000px" }} className="w-inc bg-white p-8 rounded shadow-md">
+                <h2 className="text-4xl font-bold mb-4 text-black text-center">Query</h2>
+               
+                {showFields && (
+                    <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4 text-black">
+                        <input type="text" name="name" placeholder="Name" value={data.name} onChange={handleChange} />
+                        <input type="text" name="mobile" placeholder="Mobile Number" value={data.mobile} onChange={handleChange} />
+                        <input type="email" name="email" placeholder="Email Address" value={data.email} onChange={handleChange} />
+                        <input type="text" name="designation" placeholder="Designation" value={data.designation} onChange={handleChange} />
+                        <input type="text" name="organization" placeholder="Organization" value={data.organization} onChange={handleChange} />
+                        <input type="text" name="officeAddress" placeholder="Office Address" value={data.officeAddress} onChange={handleChange} />
+                        <input type="text" name="city" placeholder="City" value={data.city} onChange={handleChange} />
+                        <input type="text" name="querySubject" placeholder="Query Subject" value={data.querySubject} onChange={handleChange} />
+                        <textarea name="query" placeholder="Your Query" value={data.query} onChange={handleChange} className="col-span-2"/>
+                        <div className="col-span-2">
+                            <button type="submit" className="bg-green-400 hover:bg-green-400 focus:bg-green-400">Submit</button>
+                        </div>
+                    </form>
+                )}
             </div>
-            <div className="form-row">
-              <label htmlFor="organization">Organization</label>
-              <input
-                type="text"
-                id="organization"
-                name="organization"
-                placeholder=""
-                value={formData.organization}
-                onChange={handleChange}
-                className="input-field border-black"
-              />
-            </div>
-            <div className="form-row">
-              <label htmlFor="city">City</label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                placeholder=""
-                value={formData.city}
-                onChange={handleChange}
-                className="input-field border-black"
-              />
-            </div>
-            <div className="form-row">
-              <label htmlFor="query">Your Query</label>
-              <textarea
-                id="query"
-                name="query"
-                placeholder=""
-                rows="4"
-                value={formData.query}
-                onChange={handleChange}
-                className="input-field border-black"
-              />
-            </div>
-          </div>
-          <div>
-            <div className="form-row">
-              <label htmlFor="designation">Designation</label>
-              <input
-                type="text"
-                id="designation"
-                name="designation"
-                placeholder=""
-                value={formData.designation}
-                onChange={handleChange}
-                className="input-field border-black"
-              />
-            </div>
-            <div className="form-row">
-              <label htmlFor="officeAddress">Office Address</label>
-              <input
-                type="text"
-                id="officeAddress"
-                name="officeAddress"
-                placeholder=""
-                value={formData.officeAddress}
-                onChange={handleChange}
-                className="input-field border-black"
-              />
-            </div>
-            <div className="form-row">
-              <label htmlFor="email">Email Address*</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder=""
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="input-field border-black"
-              />
-            </div>
-            <div className="form-row">
-              <label htmlFor="mobile">Mobile Number</label>
-              <input
-                type="tel"
-                id="mobile"
-                name="mobile"
-                placeholder=""
-                value={formData.mobile}
-                onChange={handleChange}
-                className="input-field border-black"
-              />
-            </div>
-            <div className="form-row">
-              <label htmlFor="querySubject">Query Subject</label>
-              <input
-                type="text"
-                id="querySubject"
-                name="querySubject"
-                placeholder=""
-                value={formData.querySubject}
-                onChange={handleChange}
-                className="input-field border-black"
-              />
-            </div>
-          </div>
-          <div className="col-span-2">
-            <button type="submit" className="bg-green-400 text-white font-bold py-2 px-4 rounded">
-              Send Inquiry
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
+        </div>
+    );
 };
 
 export default Query;

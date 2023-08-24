@@ -37,6 +37,9 @@ const Navbar = () => {
         <li className='p-4'>
           <Link to="/contact">Contact Us</Link>
         </li>
+        <li className='p-4'>
+          <Link to="/query">Form</Link>
+        </li>
         <li className='p-4 relative' onMouseEnter={() => setDropdownVisible(true)} onMouseLeave={() => setDropdownVisible(false)}>
           <Link to="/service">Services</Link>
           <ul className={`absolute left-0 top-full bg-white border border-gray-300 py-2 rounded shadow ${dropdownVisible ? 'block' : 'hidden'}`}>
@@ -52,6 +55,7 @@ const Navbar = () => {
             <li className='dropdown-item'>
               <Link to="/service/other">Other Services</Link>
             </li>
+            
           </ul>
         </li>
         <li className='p-4'>
@@ -89,16 +93,16 @@ const Navbar = () => {
           Services
           <ul>
             <li className='p-2'>
-              <Link to="/accounting-auditing">Accounting and Auditing</Link>
+              <Link to="/service/accounting-auditing">Accounting and Auditing</Link>
             </li>
             <li className='p-2'>
-              <Link to="/income">Income TAX</Link>
+              <Link to="/service/income">Income TAX</Link>
             </li>
             <li className='p-2'>
-              <Link to="/indirect">Indirect Tax</Link>
+              <Link to="/service/indirect">Indirect Tax</Link>
             </li>
             <li className='p-2'>
-              <Link to="/other">Other Services</Link>
+              <Link to="/service/other">Other Services</Link>
             </li>
           </ul>
         </li>

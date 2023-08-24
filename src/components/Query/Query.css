@@ -1,35 +1,115 @@
 /* Query.css */
 
-.input-field {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #000;
+/* Base styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* Main form container */
+.w-inc {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff; /* Setting the component's background color to white */
+}
+
+/* Main heading style */
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form fields styling */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+input,
+textarea,
+button {
+  padding: 10px;
+  border: 1px solid #ddd;
   border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
 }
 
-.form-row {
-  margin-bottom: 16px;
+input:focus,
+textarea:focus {
+  border-color: #007BFF;
+  outline: none;
 }
 
-/* Mobile styles: Stacking all elements */
-@media (max-width: 767px) {
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
+/* Textarea specific style */
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit button style */
+button {
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive for smaller devices */
+@media screen and (max-width: 768px) {
+  form {
+      grid-template-columns: 1fr;
+  }
+
+  .w-inc {
+      padding: 10px;
   }
 }
 
-/* Tablet styles (e.g. iPad) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Popup styles */
+.fixed {
+  position: fixed;
 }
 
-/* Laptop/Desktop styles */
-@media (min-width: 1025px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 800px;
-    margin: 0 auto;
-  }
+.rounded {
+  border-radius: 8px;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.p-8 {
+  padding: 20px;
+}
+
+/* Center aligning utilities */
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+h-screen {
+  height: 100vh;
 }

@@ -1,43 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-
+import './Footer.css';
 const Footer = () => {
   return (
-    <div className='max-w-[1240px] mx-auto py-20 px-6 flex justify-between text-lg text-gray-300'>
+    <div className='footer-container'>
 
       {/* Contact and Social Media Links */}
-      <div className='flex flex-col w-1/3 mb-16'> {/* Increased bottom margin using mb-16 */}
-        <h1 className='w-full text-4xl font-bold text-[#00df9a] mb-8'>CA. Parth A. Doshi</h1>
-        <p className='py-6'>
+      <div className='contact-section'>
+        <h1 className='contact-title'>CA. Parth A. Doshi</h1>
+        <p className='contact-details'>
           Mobile: +91 9702260296<br />
           Email: contact@padoshiassociates.com <br />
           Address: 1302, Ashtha Heights, Jawahar Nagar, Goregaon West, Mumbai – 400104
         </p>
-       
       </div>
 
       {/* Quick Links */}
-      <div className='flex flex-col w-1/3 mb-4'>
-        <h6 className='font-semibold text-xl text-gray-400'>Quick Links:</h6>
-        <ul>
-          <li className='py-2 text-lg'><a href="/">Home</a></li>
-          <li className='py-2 text-lg'><Link to="/about">About Us</Link></li>
-          <li className='py-2 text-lg'><Link to="/Service">Services</Link></li>
-          <li className='py-2 text-lg'><Link to="/queries">Queries</Link></li>
-          <li className='py-2 text-lg'><Link to="/ContactUS">Contact Us</Link></li>
+      <div className='quick-links-section'>
+        <h6 className='quick-links-title'>Quick Links:</h6>
+        <ul className='quick-links-list'>
+          <li className='quick-link-item'><a href="/" className='quick-link'>Home</a></li>
+          <li className='quick-link-item'><Link to="/about" className='quick-link'>About Us</Link></li>
+          <li className='quick-link-item'><Link to="/Service" className='quick-link'>Services</Link></li>
+          <li className='quick-link-item'><Link to="/queries" className='quick-link'>Queries</Link></li>
+          <li className='quick-link-item'><Link to="/ContactUS" className='quick-link'>Contact Us</Link></li>
         </ul>
       </div>
 
       {/* Services */}
-      <div className='flex flex-col w-1/3 mt-0'>
-        <h6 className='font-semibold text-xl text-gray-400'>Services:</h6>
-        <ul>
-        <li className='py-2 text-lg'><Link to="/service/income">Income Tax</Link></li>   
-        <li className='py-2 text-lg'><Link to="/service/indirect">Indirect Tax</Link></li>    
-        <li className='py-2 text-lg'><Link to="/service/service/other">Other Services</Link></li>
-        <li className='py-2 text-lg'><Link to="/service/accounting-auditing">Accounting and Auditing</Link></li>
-      
+      <div className='services-section'>
+        <h6 className='services-title'>Services:</h6>
+        <ul className='services-list'>
+          <li className='service-item'><Link to="/service/income" className='service-link'>Income Tax</Link></li>   
+          <li className='service-item'><Link to="/service/indirect" className='service-link'>Indirect Tax</Link></li>    
+          <li className='service-item'><Link to="/service/other" className='service-link'>Other Services</Link></li>
+          <li className='service-item'><Link to="/service/accounting-auditing" className='service-link'>Accounting and Auditing</Link></li>
         </ul>
       </div>
     </div>
