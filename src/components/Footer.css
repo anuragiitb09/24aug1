@@ -1,85 +1,89 @@
-/* Query.css */
+/* Footer.css */
 
-/* Base styles - Using a scoped class for body */
-.query-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f3f4f6;
+.footer-container {
+    width: 100vw; /* This will make sure it takes the full viewport width */
+    padding: 20px 116px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start; /* To align items at the top */
+    background-color: #000; /* Black background color */
+    color: #fff; /* Text color set to white for visibility against black background */
+    font-size: 16px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    flex-direction: column; /* By default, the direction is column for mobile */
 }
-
-/* Main form container */
-.w-inc {
-    max-width: 1000px;
-    margin: auto;
+/* Each section styles */
+.footer-section {
+    width: 100%; /* Takes up the full width of the container */
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #ffffff;
-}
-
-.w-inc h2 {
-    color: #333;
-    margin-bottom: 20px;
+    box-sizing: border-box;
     text-align: center;
 }
 
-.w-inc form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.w-inc input,
-.w-inc textarea,
-.w-inc button {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+/* Contact section styles */
+.contact-title {
     width: 100%;
-    box-sizing: border-box;
-    transition: border 0.3s ease;
+    font-size: 36px;
+    font-weight: bold;
+    color: #00df9a;
+   /* margin-bottom: 20px; */
 }
 
-.w-inc input:focus,
-.w-inc textarea:focus {
-    border-color: #007BFF;
-    outline: none;
+.contact-details {
+    padding: 20px 0;
+    line-height: 1.5;
 }
 
-.w-inc textarea {
-    resize: vertical;
+/* Quick links and services sections' common styles */
+.quick-links-title, .services-title {
+    font-weight: semi-bold;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
 }
 
-.w-inc button {
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Link styling */
+.quick-links-list a, 
+.services-list a, 
+.service-link {
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+    display: block;
+    font-size: 16px;
 }
 
-.w-inc button:hover {
-    background-color: #0056b3;
+.quick-links-list a:hover, 
+.services-list a:hover, 
+.service-link:hover {
+    color: #555;
 }
 
-/* Responsive for smaller devices */
-@media screen and (max-width: 768px) {
-    .w-inc form {
-        grid-template-columns: 1fr;
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    .contact-title, .quick-links-title, .services-title {
+        font-size: 18px; /* Adjust font size for mobile */
     }
-
-    .w-inc {
-        padding: 10px;
+    .contact-details, .quick-links-list a, .services-list a {
+        font-size: 14px;
     }
 }
 
-/* Popup styles */
-.query-popup .fixed {
-    position: fixed;
+/* Tablets or iPads */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .footer-container {
+        flex-wrap: nowrap; /* Keep them stacked vertically */
+    }
 }
 
-.query-popup .rounded {
-    border-radius: 8px;
-}
-
-.query-popup .shadow-md {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Laptops and up */
+@media screen and (min-width: 769px) {
+    .footer-container {
+        flex-direction: row; /* Lay out sections side by side */
+    }
+    .footer-section {
+        width: 40%; /* Adjust based on your layout preference */
+        padding: 10px; /* Reduced padding from 20px to 10px */
+    }
 }

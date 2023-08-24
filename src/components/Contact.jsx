@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Contact.css';
 import AnuImage from '../assets/anu.jpg';
 import AnuImage1 from '../assets/anu1.jpg';
 import AnuImage2 from '../assets/anu2.jpg';

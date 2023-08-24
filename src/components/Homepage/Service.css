@@ -1,5 +1,38 @@
 /* Service.css */
 
+/* Base styles for the main grid container */
+.max-w-[700px] {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+/* Styles for the individual service link */
+.flex.flex-col.justify-center.mb-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.w-full.mx-auto.my-4 {
+    width: 100%;
+    margin: 4px auto;
+}
+
+/* Heading styles */
+.text-[#00df9a].text-xl.font-bold.text-center {
+    color: #00df9a;
+    font-size: 1rem; /* Approximate value for Tailwind's text-xl */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* If you plan on having a dropdown effect for these links, consider using :hover pseudo-class and visibility or display properties. 
+   However, based on the code you've given, it's unclear what dropdown effect you're aiming for. */
+
 /* Mobile styles */
 .service-container img {
     max-width: 100%;

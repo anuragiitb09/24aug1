@@ -37,9 +37,7 @@ const Navbar = () => {
         <li className='p-4'>
           <Link to="/contact">Contact Us</Link>
         </li>
-        <li className='p-4'>
-          <Link to="/query">Form</Link>
-        </li>
+       
         <li className='p-4 relative' onMouseEnter={() => setDropdownVisible(true)} onMouseLeave={() => setDropdownVisible(false)}>
           <Link to="/service">Services</Link>
           <ul className={`absolute left-0 top-full bg-white border border-gray-300 py-2 rounded shadow ${dropdownVisible ? 'block' : 'hidden'}`}>
@@ -59,7 +57,7 @@ const Navbar = () => {
           </ul>
         </li>
         <li className='p-4'>
-          <a href="https://forms.zoho.in/anuragpachgade/form/ContactUs" target="_blank" rel="noopener noreferrer">Queries</a>
+          <Link to="/query">Query</Link>
         </li>
         {loggedIn ? (
           <li className='p-4'>
@@ -72,7 +70,7 @@ const Navbar = () => {
         )}
         {loggedIn && (
           <li className={`p-4 ${isHomePage ? 'text-black' : ''}`}>
-            <Link to="/data-form">Data Form</Link>
+            <Link to="https://docs.google.com/spreadsheets/d/1jFTvddQ-tEi7vUoCYJiaJRceuVCHuq0FAeRdxC8qFRY/edit#gid=0">Data Form</Link>
           </li>
         )}
       </ul>
@@ -82,7 +80,7 @@ const Navbar = () => {
       </div>
 
       <ul className={nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'ease-in-out duration-500 fixed left-[-100%]'}>
-        <h2 className='w-full text-3xl font-bold text-[#00df9a] m-4'>REACT.</h2>
+        <h2 className='w-full text-3xl font-bold text-[#00df9a] m-4'>CA PA.Doshi</h2>
         <li className='p-4 border-b border-gray-600 text-white'>
           <Link to="/">Home</Link>
         </li>
