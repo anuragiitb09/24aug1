@@ -1,37 +1,41 @@
 /* ContactUs.css */
 
-.container {
+.container-contact {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;  /* To spread out the sections across the full width */
     height: 100vh;
-    width: 100%;
+    width: ;  /* This ensures that the container covers the full viewport width */
     background-color: #fff;
+    padding: 0 50px;  /* Added some horizontal padding to prevent content sticking to edges */
 }
 
-.image-section {
+.image-section-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;  /* This ensures that each image section takes equal width */
-    padding: 0 20px;  /* This gives some spacing between sections */
+    padding: 0 10px;  /* Padding between sections */
 }
 
 .image-round {
-    width: 100px;
-    height: 100px;
+    width: 150px;  /* Increased image size */
+    height: 150px;  /* Increased image size */
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
 }
 
-.headline {
-    color: green;
+.headline-contact {
+    color: #00Df9A;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .description {
     text-align: center;
+    max-width: 80%;  /* This makes the description not stretch too wide */
+    margin-top: 20px;  /* Added margin to separate the description from the headline */
 }
+
