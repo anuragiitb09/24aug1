@@ -19,13 +19,7 @@
     padding: 0 10px;  /* Padding between sections */
 }
 
-.image-round {
-    width: 150px;  /* Increased image size */
-    height: 150px;  /* Increased image size */
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
+
 
 .headline-contact {
     color: #00Df9A;
@@ -33,7 +27,7 @@
     margin-bottom: 10px;
 }
 
-.description {
+.description-contact {
     text-align: center;
     max-width: 80%;  /* This makes the description not stretch too wide */
     margin-top: 20px;  /* Added margin to separate the description from the headline */
