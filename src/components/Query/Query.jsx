@@ -16,7 +16,7 @@ const Query = () => {
 
     const [submitted, setSubmitted] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
-    //const [showFields, setShowFields] = useState(true); 
+    const [showFields] = useState(true); // Commented out setShowFields
 
     const handleChange = e => {
         setData({
@@ -27,7 +27,6 @@ const Query = () => {
 
     const handleSubmit = async e => {
         e.preventDefault();
-
         try {
             const response = await fetch("https://v1.nocodeapi.com/anuragpachgade/google_sheets/rCkXllGeoIUYcCxE?tabId=Sheet1", {
                 method: "POST",
@@ -63,9 +62,9 @@ const Query = () => {
         }
     };
 
-    return (
-        <div className="bg-white flex justify-center items-center h-screen">
-            {submitted && showPopup ? (
+        return (
+            <div className="bg-white flex justify-center items-center h-screen">
+                {submitted && showPopup ? (
                 <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
                     <div className="bg-white p-8 rounded shadow-md">
                         <p>We will reach you in 24hrs</p>
@@ -74,7 +73,7 @@ const Query = () => {
                 </div>
             ) : null}
 
-            <div style={{ width: "1000px" }} className="w-inc bg-white p-8 rounded shadow-md">
+<div style={{ width: "1000px" }} className="w-inc bg-white p-8 rounded shadow-md">
                 <h2 className="text-4xl font-bold mb-4 text-black text-center">Query</h2>
                
                 {showFields && (
@@ -99,3 +98,14 @@ const Query = () => {
 };
 
 export default Query;
+
+
+
+    
+
+    
+
+    
+    
+           
+          
