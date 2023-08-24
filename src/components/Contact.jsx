@@ -1,32 +1,30 @@
 import React from 'react';
 import './Contact.css';
-import Grow from '../assets/grow.jpg';
-import Handshake from '../assets/handshake.jpg';
-import Trust from '../assets/trust.jpg';
 
-const Contact = () => {
+const ContactUs = () => {
     return (
         <div className="container-contact">
             
-            <div className="image-section-contact">
-                <img src={Grow} alt="Mobile No" />
-                <h2 className="headline-contact">Mobile No.</h2>
-                <p className="description-contact">+91 9702260296</p>
+            <div className="row">
+                <img src="anu.jpg" alt="Description 1" className="image-round"/>
+                <img src="anu1.jpg" alt="Description 2" className="image-round"/>
+                <img src="anu2.jpg" alt="Description 3" className="image-round"/>
             </div>
 
-            <div className="image-section-contact">
-                <img src={Handshake} alt="Mail" />
-                <h2 className="headline-contact">E-Mail</h2>
-                <p className="description-contact">contact@padoshiassociates.com</p>
+            <div className="row">
+                <h2 className="headline-contact">Headline 1</h2>
+                <h2 className="headline-contact">Headline 2</h2>
+                <h2 className="headline-contact">Headline 3</h2>
             </div>
 
-            <div className="image-section-contact">
-                <img src={Trust} alt="Address" />
-                <h2 className="headline-contact">Address</h2>
-                <p className="description-contact">Address: 1302, Ashtha Heights, Jawahar Nagar,<br/>Goregaon West, Mumbai – 400104</p>
+            <div className="row">
+                <p className="description-contact">Description for the first image.</p>
+                <p className="description-contact">Description for the second image.</p>
+                <p className="description-contact">Description for the third image.</p>
             </div>
+
         </div>
     );
 };
 
-export default Contact;
+export default ContactUs;
