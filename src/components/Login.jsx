@@ -5,12 +5,10 @@ import './Login.css';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [loggedIn, setLoggedIn] = useState(false);
   const [wrongPassword, setWrongPassword] = useState(false);
 
   const handleLogin = () => {
     if (username === 'anurag' && password === '1234') {
-      setLoggedIn(true);
       setWrongPassword(false);
 
       // Redirecting to the Google Spreadsheet after successful login
@@ -19,7 +17,7 @@ const Login = () => {
       setWrongPassword(true);
     }
   };
-
+  
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: 'white' }}>
       <div style={{ background: '#00df9a', padding: '20px', borderRadius: '5px', textAlign: 'center', border: '2px solid #00bf8f', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
@@ -47,3 +45,4 @@ const Login = () => {
 };
 
 export default Login;
+ 

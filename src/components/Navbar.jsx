@@ -87,28 +87,31 @@ const Navbar = () => {
         <li className='p-4 border-b border-gray-600 text-white'>
           <Link to="/about">About Us</Link>
         </li>
-        <li className='p-4 text-white'>
+        <li className='p-4 text-white border-gray-600'  >
           Services
           <ul>
-            <li className='p-2'>
+          <li className='p-2 border-gray-600 '   >
               <Link to="/service/accounting-auditing">Accounting and Auditing</Link>
             </li>
-            <li className='p-2'>
+            <li className='p-2 border-gray-600 '   >
               <Link to="/service/income">Income TAX</Link>
             </li>
-            <li className='p-2'>
+            <li className='p-2 border-gray-600 '   >
+              <Link to="/contact">ContactUS</Link>
+            </li>
+            <li className='p-2 border-gray-600 '   >
               <Link to="/service/indirect">Indirect Tax</Link>
             </li>
-            <li className='p-2'>
+            <li className='p-2 border-gray-600 '   >
               <Link to="/service/other">Other Services</Link>
             </li>
           </ul>
         </li>
-        <li className='p-4 border-b border-gray-600 text-white'>
-          <a href="https://forms.zoho.in/anuragpachgade/form/ContactUs" target="_blank" rel="noopener noreferrer">Queries</a>
+        <li className='p-4 border-b border-gray-600 text-white '>
+        <Link to="/query">Query</Link>
         </li>
-        <li className='p-4 text-white'>
-          <Link to="/contact">Contact Us</Link>
+        <li className='p-4 border-b border-gray-600 text-white'>
+        <Link to="/contact">Contact Us</Link>
         </li>
       </ul>
     </div>

@@ -13,6 +13,7 @@ import Service from './components/Homepage/Service';
 import Other from './components/Homepage/Diff/Other';  
 import Indirect from './components/Homepage/Diff/Indirect';  
 import Income from './components/Homepage/Diff/Income';
+import Contact from './components/Contact';
 //import Reach from './components/Reach';
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/photo" element={<Photo />} />
           <Route path="/service" element={<Service />} />
-         
+         <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/service/accounting-auditing" element={<AccountingAndAuditing />} />
           <Route path="/service/other" element={<Other />} />

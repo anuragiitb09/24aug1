@@ -1,52 +1,29 @@
 import React from 'react';
 import './Contact.css';
-import AnuImage from '../assets/anu.jpg';
-import AnuImage1 from '../assets/anu1.jpg';
-import AnuImage2 from '../assets/anu2.jpg';
 
-const Contact = () => {
+const ContactUs = () => {
     return (
-        <div className="contact-container">
-            <h1 className="headline">Contact Us</h1>
+        <div className="container">
             
-            <div className="contact-items-container">
-                <div className="contact-item">
-                   
-                  
-                        
-                  
-                  
-                    <p className="description">+91 9702260296</p>
-                </div>
-                <div className="contact-item">
-                <img src={AnuImage} alt="Anu" className="background-image" />
-                    <div className="contact-overlay">
-                    <div className="contact-text">+91 9702260296</div>
-                    </div>
-                    <h2>Mobile No</h2>
-                    <p className="description">contact@padoshiassociates.com</p>
-                </div>
+            <div className="image-section">
+                <img src="path_to_image1.jpg" alt="Description 1" className="image-round"/>
+                <h2 className="headline">Headline 1</h2>
+                <p className="description">Description for the first image.</p>
+            </div>
 
-                <div className="contact-item">
-                    <img src={AnuImage1} alt="Anu1" className="background-image" />
-                    <div className="contact-overlay">
-                        <div className="contact-text">contact@padoshiassociates.com</div>
-                    </div>
-                    <h2>Mail</h2>
-                    <p className="description">contact@padoshiassociates.com</p>
-                </div>
+            <div className="image-section">
+                <img src="path_to_image2.jpg" alt="Description 2" className="image-round"/>
+                <h2 className="headline">Headline 2</h2>
+                <p className="description">Description for the second image.</p>
+            </div>
 
-                <div className="contact-item">
-                    <img src={AnuImage2} alt="Anu2" className="background-image" />
-                    <div className="contact-overlay">
-                        <div className="contact-text">1302, Ashtha Heights, Jawahar Nagar, Goregaon West, Mumbai – 400104</div>
-                    </div>
-                    <h2>Address</h2>
-                    <p className="description">1302, Ashtha Heights, Jawahar Nagar, Goregaon West, Mumbai – 400104</p>
-                </div>
+            <div className="image-section">
+                <img src="path_to_image3.jpg" alt="Description 3" className="image-round"/>
+                <h2 className="headline">Headline 3</h2>
+                <p className="description">Description for the third image.</p>
             </div>
         </div>
     );
 };
 
-export default Contact;
+export default ContactUs;
