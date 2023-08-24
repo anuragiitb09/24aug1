@@ -16,7 +16,7 @@ const Query = () => {
 
     const [submitted, setSubmitted] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
-    const [showFields, setShowFields] = useState(true); 
+    const showFields = useState(true)[0];
 
     const handleChange = e => {
         setData({
