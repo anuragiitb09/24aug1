@@ -1,30 +1,32 @@
 import React from 'react';
 import './Contact.css';
+import MobileImage from '../assets/grow.jpg';
+import EmailImage from '../assets/handshake.jpg';
+import AddressImage from '../assets/trust.jpg';
 
-const ContactUs = () => {
+const Contact = () => {
     return (
         <div className="container-contact">
             
-            <div className="row">
-                <img src="anu.jpg" alt="Description 1" className="image-round"/>
-                <img src="anu1.jpg" alt="Description 2" className="image-round"/>
-                <img src="anu2.jpg" alt="Description 3" className="image-round"/>
+            <div className="image-section-contact">
+                <img src={MobileImage} alt="Mobile No" className="image-round" />
+                <h2 className="headline-contact">Mobile No.</h2>
+                <p className="description-contact">+91 9702260296</p>
             </div>
 
-            <div className="row">
-                <h2 className="headline-contact">Headline 1</h2>
-                <h2 className="headline-contact">Headline 2</h2>
-                <h2 className="headline-contact">Headline 3</h2>
+            <div className="image-section-contact">
+                <img src={EmailImage} alt="Mail" className="image-round" />
+                <h2 className="headline-contact">E-Mail</h2>
+                <p className="description-contact">contact@padoshiassociates.com</p>
             </div>
 
-            <div className="row">
-                <p className="description-contact">Description for the first image.</p>
-                <p className="description-contact">Description for the second image.</p>
-                <p className="description-contact">Description for the third image.</p>
+            <div className="image-section-contact">
+                <img src={AddressImage} alt="Address" className="image-round" />
+                <h2 className="headline-contact">Address</h2>
+                <p className="description-contact">Address: 1302, Ashtha Heights, Jawahar Nagar, Goregaon West, Mumbai – 400104</p>
             </div>
-
         </div>
     );
 };
 
-export default ContactUs;
+export default Contact;
