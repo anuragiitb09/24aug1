@@ -1,40 +1,24 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Link } from 'react-router-dom';
 import './Login.css';
+
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
   const [wrongPassword, setWrongPassword] = useState(false);
-  
-  // Get the navigate function
-  const navigate = useNavigate();
 
   const handleLogin = () => {
     if (username === 'anurag' && password === '1234') {
       setLoggedIn(true);
       setWrongPassword(false);
-      
-      // Redirect to the First component after successful login
-      navigate('/first'); // Replace '/first' with the actual route path of the First component
+
+      // Redirecting to the Google Spreadsheet after successful login
+      window.location.href = "https://docs.google.com/spreadsheets/d/1jFTvddQ-tEi7vUoCYJiaJRceuVCHuq0FAeRdxC8qFRY/edit#gid=0";
     } else {
       setWrongPassword(true);
     }
   };
-
-  const handleLogout = () => {
-    setLoggedIn(false);
-  };
-
-  if (loggedIn) {
-    return (
-      <div>
-        <h2>Welcome, Admin!</h2>
-        <button onClick={handleLogout}>Logout</button>
-        <Link to="/other-page">Go to Other Page</Link>
-      </div>
-    );
-  }
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: 'white' }}>

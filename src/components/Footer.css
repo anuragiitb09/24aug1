@@ -1,33 +1,40 @@
-/* Footer.css */
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    flex: 1;
+}
 
 .footer-container {
-    width: 100vw; /* This will make sure it takes the full viewport width */
-    padding: 20px 116px;
+    width: 100vw;
+    padding: 20px 100px;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: start; /* To align items at the top */
-    background-color: #000; /* Black background color */
-    color: #fff; /* Text color set to white for visibility against black background */
+    
+    background-color: #000;
+    color: #fff;
     font-size: 16px;
     box-sizing: border-box;
     flex-wrap: wrap;
-    flex-direction: column; /* By default, the direction is column for mobile */
+    flex-direction: column;
 }
-/* Each section styles */
+
 .footer-section {
-    width: 100%; /* Takes up the full width of the container */
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
 }
 
-/* Contact section styles */
 .contact-title {
     width: 100%;
     font-size: 36px;
     font-weight: bold;
     color: #00df9a;
-   /* margin-bottom: 20px; */
 }
 
 .contact-details {
@@ -35,7 +42,6 @@
     line-height: 1.5;
 }
 
-/* Quick links and services sections' common styles */
 .quick-links-title, .services-title {
     font-weight: semi-bold;
     font-size: 24px;
@@ -43,10 +49,7 @@
     margin-bottom: 20px;
 }
 
-/* Link styling */
-.quick-links-list a, 
-.services-list a, 
-.service-link {
+.quick-links-list a, .services-list a, .service-link {
     text-decoration: none;
     color: white;
     padding: 10px 0;
@@ -54,36 +57,31 @@
     font-size: 16px;
 }
 
-.quick-links-list a:hover, 
-.services-list a:hover, 
-.service-link:hover {
+.quick-links-list a:hover, .services-list a:hover, .service-link:hover {
     color: #555;
 }
 
-/* Mobile devices */
 @media screen and (max-width: 480px) {
     .contact-title, .quick-links-title, .services-title {
-        font-size: 18px; /* Adjust font size for mobile */
+        font-size: 18px;
     }
     .contact-details, .quick-links-list a, .services-list a {
         font-size: 14px;
     }
 }
 
-/* Tablets or iPads */
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .footer-container {
-        flex-wrap: nowrap; /* Keep them stacked vertically */
+        flex-wrap: nowrap;
     }
 }
 
-/* Laptops and up */
 @media screen and (min-width: 769px) {
     .footer-container {
-        flex-direction: row; /* Lay out sections side by side */
+        flex-direction: row;
     }
     .footer-section {
-        width: 40%; /* Adjust based on your layout preference */
-        padding: 10px; /* Reduced padding from 20px to 10px */
+        width: 40%;
+        padding: 10px;
     }
 }

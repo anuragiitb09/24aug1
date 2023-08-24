@@ -16,10 +16,11 @@
     border: 2px solid #00bf8f;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
+    max-width: 400px;  /* Setting a maximum width */
 }
 
 .login-header {
-    color: 'black';
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -53,13 +54,13 @@
 /* Styles for tablets (iPad) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .login-form {
-        width: 70%; /* or you can set a fixed width like 500px */
+        max-width: 500px;  /* Adjusted maximum width for tablets */
     }
 }
 
 /* Styles for laptops and larger screens */
 @media (min-width: 1025px) {
     .login-form {
-        width: 50%; /* or set to a comfortable fixed width */
+        max-width: 600px;  /* Adjusted maximum width for laptops */
     }
 }
