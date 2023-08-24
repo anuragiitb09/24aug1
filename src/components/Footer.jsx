@@ -34,8 +34,8 @@ const Footer = () => {
         <h6 className='font-semibold text-xl text-gray-400'>Services:</h6>
         <ul>
         <li className='py-2 text-lg'><Link to="/service/income">Income Tax</Link></li>   
-        <li className='py-2 text-lg'><Link to="/indirect">Indirect Tax</Link></li>    
-        <li className='py-2 text-lg'><Link to="/service/other">Other Services</Link></li>
+        <li className='py-2 text-lg'><Link to="/service/indirect">Indirect Tax</Link></li>    
+        <li className='py-2 text-lg'><Link to="/service/service/other">Other Services</Link></li>
         <li className='py-2 text-lg'><Link to="/service/accounting-auditing">Accounting and Auditing</Link></li>
       
         </ul>

@@ -41,16 +41,16 @@ const Navbar = () => {
           <Link to="/service">Services</Link>
           <ul className={`absolute left-0 top-full bg-white border border-gray-300 py-2 rounded shadow ${dropdownVisible ? 'block' : 'hidden'}`}>
             <li className='dropdown-item'>
-              <Link to="/accounting-auditing">Accounting and Auditing</Link>
+              <Link to="/service/accounting-auditing">Accounting and Auditing</Link>
             </li>
             <li className='dropdown-item'>
-              <Link to="/income">Income TAX</Link>
+              <Link to="/service/income">Income TAX</Link>
             </li>
             <li className='dropdown-item'>
-              <Link to="/indirect">Indirect Tax</Link>
+              <Link to="/service/indirect">Indirect Tax</Link>
             </li>
             <li className='dropdown-item'>
-              <Link to="/other">Other Services</Link>
+              <Link to="/service/other">Other Services</Link>
             </li>
           </ul>
         </li>
