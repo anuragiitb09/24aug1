@@ -1,0 +1,143 @@
+/* Basic styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21rem;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Add this to your Navbar.css */
+.dropdown-menu-item {
+    font-size: 0.8rem; /* Adjust as needed to fit content in one line */
+  }
+  
+  .dropdown-item {
+    font-size: 0.9rem;    /* Smaller font size */
+    white-space: nowrap;  /* Prevent wrapping */
+    overflow: hidden;     /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis if content overflows */
+    max-width: 200px;     /* Set a max width for each item */
+    padding: 2px 50px;     /* Reduce padding */
+  }
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 2rem;  /* Increase this value for more space */
+    width: 60px;
+    height: 50px;
+}
+
+
+.menu-icon {
+    display: none; /* Hidden by default */
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+}
+
+.dropdown {
+    position: relative;
+    padding-bottom: 4px; /* Increase padding for stability */
+}
+
+/* ... rest of your CSS ... */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 0; /* Remove any gap */
+    opacity: 0; /* start fully transparent */
+    visibility: hidden; /* start as hidden for accessibility purposes */
+    transition: opacity 0.3s, visibility 0.3s; /* 0.3s timing for both opacity and visibility */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1; /* on hover, become fully visible */
+    visibility: visible; /* on hover, become accessible */
+}
+
+/* ... rest of your CSS ... */
+
+
+
+
+/* Responsive for tablets and smaller devices */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-items {
+        display: none; /* Hide navbar items and show menu icon instead */
+    }
+
+    .mobile-nav {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #000;
+        color: #fff;
+        flex-direction: column;
+        align-items: start;
+        padding: 1rem;
+        gap: 1rem;
+        z-index: 1000; /* Ensure it's on top */
+    }
+
+    .mobile-nav.show {
+        display: flex;
+    }
+
+    .mobile-nav-item {
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid #333;
+    }
+
+    /* Dropdown for mobile */
+    .mobile-dropdown-content {
+        display: none;
+        background-color: #111;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        border-bottom: 1px solid #333;
+    }
+
+    .dropdown:hover .mobile-dropdown-content {
+        display: flex;
+    }
+}
+
+/* iPad & Laptop */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .nav-items li {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .logo span {
+        font-size: 2.2rem;
+    }
+    .logo img {
+        margin-right: 2rem;  /* Increase this value for more space */
+        width: 60px;
+        height: 50px;
+    }
+    
+}

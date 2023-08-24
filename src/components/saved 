@@ -1,0 +1,82 @@
+<img src={indirectImage} alt="Indirect Taxes" className="photo-item" /> 
+<img src={othersImage} alt="Other Photos" className="photo-item" />
+<img src={Accounts} alt="Accounting" className="photo-item" />
+
+import indirectImage from '../assets/Indirect.png';
+import othersImage from '../assets/Others.png';
+import Accounts from '../assets/Acc.jpg'; //import 
+
+.photo-scroll {
+    white-space: nowrap; /* Keep images in a single line */
+    animation: scroll 15s linear infinite; /* Adjust animation duration as needed */
+  } //photo.css
+
+
+  button
+
+  <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:bg-green-600">
+    Get Started
+  </button> 
+
+
+  <img src="https://www.clipartmax.com/png/small/70-702255_career-as-a-ca-indian-chartered-accountant-logo.png" 
+  alt="Career As A Ca - Indian Chartered Accountant Logo @clipartmax.com">
+
+
+  <div className="mt-10 text-center">
+       
+    <h2 className="text-5xl font-bold py-4">Latest News</h2>
+    <Stay showTitle={true} />
+  </div>
+
+
+
+  <div className='flex justify-between md:w-[85%] my-8'>
+    <FaFacebookSquare size={40} />
+    <FaInstagram size={40} />
+    <FaTwitterSquare size={40} />
+    <FaGithubSquare size={40} />
+    <FaDribbbleSquare size={40} />
+  </div>
+
+  // import {
+    //   FaDribbbleSquare,
+    //   FaFacebookSquare,
+    //   FaGithubSquare,
+    //   FaInstagram,
+    //   FaTwitterSquare,
+    // } from 'react-icons/fa';
+    <div className='flex justify-between md:w-[85%] my-8'>
+      <FaFacebookSquare size={40} />
+      <FaInstagram size={40} />
+      <FaTwitterSquare size={40} />
+      <FaGithubSquare size={40} />
+      <FaDribbbleSquare size={40} />
+    </div>
+
+
+
+
+
+    <div className="indirect-content">
+      <h2 className="indirect-title">Indirect Taxation (Goods & Service Tax) – Scope of Service</h2>
+      <h3>A. Registration under GST Act</h3>
+      <section>
+     
+          <ul>
+              <li><strong>Threshold limit for GST Registration:</strong></li>
+              <ul>
+                  <li>For Services: 20 Lakhs per year / 10 Lakhs for Special Category States</li>
+                  <li>For Goods: 40 Lakhs per year / 20 Lakhs for Special Category States</li>
+              </ul>
+              <li><strong>Registration:</strong></li>
+              <ul>
+                  <li>Normal Registration</li>
+                  <li>Temporary Registration for Casual Taxable Person / Non-Resident Indian</li>
+                  <li>Others (SEZ, EOU etc)</li>
+              </ul>
+              <li><strong>Support:</strong> Support in filing application along with supporting documents for registration, cancellation of registration, and amendment of registration.</li>
+          </ul>
+      </section>
+      {/* You can add other sections (B, C, etc.) in a similar manner */}
+  </div>

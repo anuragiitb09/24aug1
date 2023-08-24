@@ -1,0 +1,68 @@
+/* Base styles */
+.other-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    padding: 16px;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box; /* ensure padding and border are included in the total width */
+}
+
+.other-image {
+    max-width: 660px; /* Max width of the image */
+    width: 100%; /* Make it responsive */
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    object-fit: cover; /* Crop and resize the image to fit its container */
+    margin-bottom: 16px;
+    border-radius: 0;
+}
+
+.other-title {
+    color: #00df9a;
+    font-weight: bold;
+    font-size: 2.5em; /* Increase the font size */
+    text-align: center;
+}
+
+.other-content {
+    flex-grow: 1;
+}
+
+.other-content h2 {
+    color: #00df9a;
+    font-weight: bold;
+    font-size: 2em; /* Increase the font size */
+    text-align: center;
+}
+
+.other-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+    .other-content h2 {
+        font-size: 1.5em; /* Reduce font size for smaller screens */
+    }
+}
+
+/* iPads & tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .other-image {
+        width: 80%; /* Set width to 80% of container */
+    }
+    .other-content h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* Laptops and above */
+@media screen and (min-width: 1025px) {
+    .other-image {
+        width: 90%; /* Set width to 90% for larger screens */
+    }
+}

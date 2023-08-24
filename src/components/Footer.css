@@ -1,0 +1,103 @@
+/* Mobile-first styles */
+
+.footer-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 2px; /* Reduced padding */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px; /* Reduced gap */
+    color: #a0a0a0;
+    background-color: #1f1f1f;  /* Dark background */
+    border-top: 3px solid #00df9a;  /* Reduced border thickness */
+}
+.quick-links {
+    padding-top: 10px;  /* Reduced padding from 15px to 10px */
+    padding-bottom: 5px;  /* Added padding-bottom to separate from the next section */
+}
+
+.footer-services {
+    padding-top: 5px;  /* Added padding-top to separate from the previous section */
+}
+
+.contact-details {
+    padding-bottom: 5px;  /* Reduced padding at the bottom */
+}
+
+.quick-links {
+    padding-top: 5px;  /* Reduced padding at the top */
+}
+
+.footer-header {
+    width: 100%;
+    font-size: 4rem;  /* Reduced font size */
+    font-weight: bold;
+    color: #00df9a;
+    border-bottom: 1px solid #00df9a;  /* Reduced border thickness */
+    padding-bottom: 6px;  /* Reduced padding */
+}
+
+.footer-text {
+    padding: 4px 0;  /* Reduced padding */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-links h6, .footer-services h6, .footer-company h6, .footer-legal h6 {
+    font-weight: 600;
+    padding: 4px 0;  /* Reduced padding */
+    text-transform: uppercase; /* Make the text uppercase */
+}
+
+.footer-links ul, .footer-services ul, .footer-company ul, .footer-legal ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links a, .footer-services a, .footer-company a, .footer-legal a {
+    color: #a0a0a0;
+    text-decoration: none;
+    padding: 2px 0;  /* Reduced padding */
+    display: block;
+    transition: color 0.3s ease;  /* Smooth transition */
+}
+
+/* Tablet (iPad) styles */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;  /* Reduced gap */
+    }
+
+    .footer-header {
+        font-size: 2rem;  /* Reduced font size */
+    }
+}
+
+/* Laptop/Desktop styles */
+
+@media (min-width: 1025px) {
+    .footer-container {
+        max-width: 1280px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;  /* Reduced gap */
+    }
+
+    .footer-header {
+        font-size: 2.8rem;  /* Reduced font size */
+    }
+
+    .social-icons {
+        width: 80%;
+    }
+
+    .footer-links, .footer-services {
+        padding: 10px;  /* Reduced padding */
+        border-radius: 8px;  /* Adjusted border-radius */
+    }
+}

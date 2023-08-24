@@ -1,0 +1,88 @@
+/* Income.css */
+
+.w-full {
+    width: 100%;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.service-header {
+    color: black;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+}
+
+.max-w-[700px] {
+    max-width: 700px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+
+
+.list-disc {
+    list-style-type: disc;
+}
+
+.pl-5 {
+    padding-left: 1.25rem;
+}
+
+/* Responsive Design */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .service-header {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .service-header {
+        font-size: 4.5rem;
+    }
+}

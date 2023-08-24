@@ -1,0 +1,11 @@
+.photo-container, .photo-scroll, .photo-item {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.photo-item {
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

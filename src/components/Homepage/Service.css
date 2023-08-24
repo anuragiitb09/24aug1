@@ -1,0 +1,40 @@
+/* Service.css */
+
+/* Mobile styles */
+.service-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.service-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* For the "Our Services" header */
+.service-header {
+    font-size: 24px; /* You can adjust this value to your preference */
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+/* Tablet styles (e.g. iPad) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+/* Laptop/Desktop styles */
+@media (min-width: 1025px) {
+    .service-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

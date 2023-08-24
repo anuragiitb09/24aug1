@@ -1,0 +1,88 @@
+/* Hero.css */
+
+.text-black {
+    color: black;
+  }
+  
+  .bg-white {
+    background-color: white;
+  }
+  
+  .text-[#00df9a] {
+    color: #00df9a;
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-justify {
+    text-align: justify;
+  }
+  
+  .py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .pt-16 {
+    padding-top: 4rem;
+  }
+  
+.pb-2 {
+    padding-bottom: 1rem;
+  }
+  
+  .p-6 {
+    padding: 1.5rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .font-bold {
+    font-weight: bold;
+  }
+  
+  /* Mobile styles */
+  
+  /* These styles are applicable for all devices to start with */
+  
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  /* Tablet styles (e.g. iPad) */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .text-5xl {
+      font-size: 4rem;
+    }
+  
+    .text-xl {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Laptop/Desktop styles */
+  
+  @media (min-width: 1025px) {
+    .text-5xl {
+      font-size: 5rem;
+    }
+  
+    .text-xl {
+      font-size: 1.75rem;
+    }
+  }
+  

@@ -1,0 +1,65 @@
+/* Mobile-first styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+    padding: 20px;
+}
+
+.login-form {
+    background: #00df9a;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid #00bf8f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.login-header {
+    color: 'black';
+    margin-bottom: 20px;
+}
+
+.warning-text {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.login-button {
+    background: #00df9a;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-link {
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Styles for tablets (iPad) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .login-form {
+        width: 70%; /* or you can set a fixed width like 500px */
+    }
+}
+
+/* Styles for laptops and larger screens */
+@media (min-width: 1025px) {
+    .login-form {
+        width: 50%; /* or set to a comfortable fixed width */
+    }
+}

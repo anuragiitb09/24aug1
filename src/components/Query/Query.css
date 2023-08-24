@@ -1,0 +1,35 @@
+/* Query.css */
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.form-row {
+  margin-bottom: 16px;
+}
+
+/* Mobile styles: Stacking all elements */
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Tablet styles (e.g. iPad) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop/Desktop styles */
+@media (min-width: 1025px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
