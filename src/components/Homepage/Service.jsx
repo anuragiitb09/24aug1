@@ -14,7 +14,7 @@ const Service = () => {
       <div className='max-w-[700px] mx-auto grid grid-cols-2 gap-8'>
 
         {/* Accounting & Auditing */}
-        <Link to="/accounting-auditing">
+        <Link to="/service/accounting-auditing">
           <div className='flex flex-col justify-center mb-8'>
             <img
               className='w-full mx-auto my-4'
@@ -26,7 +26,7 @@ const Service = () => {
           </div>
         </Link>
 
-        <Link to="/income"> {/* Link to the Income component */}
+        <Link to="/service/income"> {/* Link to the Income component */}
   <div className='flex flex-col justify-center mb-8'>
     <img
       className='w-full mx-auto my-4'
@@ -40,7 +40,7 @@ const Service = () => {
 
 
         {/* Indirect Tax */}
-        <Link to="/indirect">
+        <Link to="/service/indirect">
           <div className='flex flex-col justify-center mb-8'>
             <img
               className='w-full mx-auto my-4'
@@ -53,7 +53,7 @@ const Service = () => {
         </Link>
 
         {/* Other Services */}
-        <Link to="/other">
+        <Link to="/service/other">
           <div className='flex flex-col justify-center mb-8'>
             <img
               className='w-full mx-auto my-4'
